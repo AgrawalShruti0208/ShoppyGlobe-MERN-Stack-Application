@@ -13,7 +13,6 @@ export function LoginPage(){
     const [err,setError] = useState('');
     const [apiResult,setApiResult] = useState('');
     
-
     const navigateTo = useNavigate();
     
     
