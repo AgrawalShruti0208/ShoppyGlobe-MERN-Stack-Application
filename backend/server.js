@@ -54,6 +54,7 @@ app.get('*', (req,res) => {
     
     // Connection string from MongoDB Atlas
     let url = process.env.MONGODB_URL;
+    const PORT = process.env.PORT || 5300;
 
     mongoose
     .connect(url)
@@ -61,8 +62,8 @@ app.get('*', (req,res) => {
             console.log("Connection with MongoDB Database Successful!");
 
             //creating server to run the application on specified port number only when connection with database is successful
-            app.listen(5300,()=>{
-                console.log("created server to run application on port number 5300");
+            app.listen(PORT,()=>{
+                console.log(`created server to run application on port number ${PORT}`);
             });
         }
     )
