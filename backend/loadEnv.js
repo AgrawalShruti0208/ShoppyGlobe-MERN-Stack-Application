@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Function to load environment variables from a file
+// Function to load environment variables
 export function loadEnv(filePath) {
     const absolutePath = path.resolve(filePath); // Resolve the file path
     if (!fs.existsSync(absolutePath)) {
@@ -21,5 +22,6 @@ export function loadEnv(filePath) {
         }
     });
 }
+
 
 

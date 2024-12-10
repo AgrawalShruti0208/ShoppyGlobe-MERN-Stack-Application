@@ -16,12 +16,22 @@ import cors from "cors" //importing 'cors' which is used to run and connect both
 //As receiving request body from front-end on button click
 import bodyParser from "body-parser";
 import {loadEnv} from "../backend/loadEnv.js";
+import { fileURLToPath } from 'url';
 
+// Get the directory of the current file
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Resolve the path to config.env in the root folder
+const envPath = path.resolve(__dirname, '../config.env');
+
+// Load the environment variables
+loadEnv(envPath);
 
 //creating express application 
 const app = new express();
 const _dirname = path.resolve();
-loadEnv('./config.env');
+
+
 
 app.use(express.json()); //Middleware to accept json data from client in the server API
 app.use(cors()); //using the middleware cors 
