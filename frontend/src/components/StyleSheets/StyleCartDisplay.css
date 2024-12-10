@@ -1,0 +1,220 @@
+.EmptyCartDiv{
+    display: flex;
+    background-color:whitesmoke;
+    width: 99vw;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.emptyCartOverlay{
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+.emptyCartOverlay img{
+  max-height: 65vh;
+}
+
+
+.EmptyCartHeading{
+    padding: 0;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 100%;
+    background-color: #99b0daa9;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+  
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+  
+  
+  .EmptyCartHeading h1 {
+    color: hsl(0, 0%, 16%);
+    font-size: 32px;
+    font-weight: 800;
+   letter-spacing: 7px!important;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px #2d77ffa9;
+     overflow: hidden; /* Ensures the content is not revealed until the animation */
+     border-right: .15em solid #023ded; /* The typwriter cursor */
+     white-space: nowrap; /* Keeps the content on a single line */
+     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+     
+     animation: 
+       typing 4s steps(60, end) infinite,
+       blink-caret .5s step-end infinite;
+   }
+   
+   /* The typing effect */
+   @keyframes typing {
+     0%{
+       width:0
+     }50%,100%{
+       width:75%
+     }
+   }
+   
+   /* The typewriter cursor effect */
+   @keyframes blink-caret {
+     from, to { border-color: transparent }
+     50% { border-color: #023ded }
+   }
+
+.BackArrow2{
+    display: flex;
+    width: 99vw;
+    background-color: whitesmoke;
+    
+}
+  .BackArrowImg2{
+    background-color:whitesmoke;
+    
+}
+
+.BackArrow2 button{
+    background-color: transparent;
+    border: none;
+    
+}
+
+.BackArrow2 button:hover{
+    transform: scale(1.2);
+}
+
+.BackArrow2 button:active{
+    transform: scale(0.9);
+}
+
+.BackArrow2 h3{
+    font-size: 1.4rem;
+    color: #7200d6;
+}
+
+.CartItems_DisplayDiv{
+  background-color:rgb(234, 214, 255);
+  width: 99vw;
+  margin: 0;
+  padding: 20px;
+  
+}
+.ShoppingCart{
+  background-color: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.726);
+}
+
+
+@layer demo2 {
+  .ShoppingCartHeading h1{
+      text-shadow:
+      /* regular text-shadow */
+      0 .15ch 15px var(--shadow),
+      /* text-shadow highlight */
+      0 -2px 0 var(--highlight);
+  }
+}
+
+
+@layer demo2.support {
+
+  .ShoppingCartHeading {
+  padding: 0;
+  background-color: #750096;
+  color: #EBB9F7;
+    display: grid;
+    place-content: center;
+    height: 10vh;
+    
+  }
+
+  
+  .ShoppingCartHeading h1{
+    font-size: 2.5vi;
+    letter-spacing: -.04ch;
+    line-height: .60;
+  }
+  
+ 
+}
+
+.ShoppingCartSections{
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 20px;
+  
+}
+
+.ShoppingCartItems{
+  width: 75%;
+}
+
+.ShoppingCartCheckout{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 25%;
+  height: 350px;
+  border-radius: 2%;
+  box-shadow: inset 2px 2px 5px rgb(183, 189, 200),inset -2px -2px 5px rgb(183, 189, 200);
+}
+
+.ShoppingCartCheckout h3{
+  text-align: center;
+  margin: 0;
+}
+
+.cartCheckOutFlex{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  height: 30px;
+}
+.ShoppingCartCheckout hr{
+  background-color: #9f02ca;
+  border: none;
+  height: 3px;
+  width: 100%;
+}
+
+/* Button Styling online */
+.PlaceOrderBtn{
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow,transform;
+  background: radial-gradient( 100% 100% at 100% 0%, #9e30e8 0%, #54026d 100% );
+  box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+  padding: 0 32px;
+  border-radius: 6px;
+  color: #fff;
+  height: 48px;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease,transform 0.15s ease;
+}
+
+.PlaceOrderBtn:hover {
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+    transform: translateY(-2px);
+}
+.PlaceOrderBtn:active{
+    box-shadow: inset 0px 3px 7px #3c4fe0;
+    transform: translateY(2px);
+}
+
+  
+ 
+  
+  

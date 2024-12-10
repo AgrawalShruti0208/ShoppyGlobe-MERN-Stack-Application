@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "DM Sans", Arial, sans-serif;
+  width: 99vw;
+}
+
+.customBtn {
+  appearance: none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  line-height: normal;
+  outline: none;
+  
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  letter-spacing: 3px;
+
+   font-size: 1.8rem;
+    font-weight: 700;
+    box-shadow: 3px 3px 7px rgba(12, 17, 30, 0.473),inset 3px 3px 4px rgba(99, 99, 99, 0.519) ;
+    background-color: #75009695;
+    padding: 8px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+
+.customBtn:hover {
+transform: translateY(-2px);
+}
+
+.customBtn:active {
+box-shadow: none;
+transform: translateY(2px);
+}
+
+
+.RatingStars{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.Stars{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.PlaceOrderDiv{
+  width: 99vw;
+  height: 78vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ErrorPageDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
+  border: 3px solid red;
+  margin: 10px auto;
+  width: 95%;
+}
+
+.ErrorHeading{
+  padding: 0;
+  margin: 0px;
+  background-color: red!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+}
+
+
+.ErrorHeading h1 {
+  color: hsl(0, 0%, 82%);
+  font-size: 50px!important;
+  font-weight: bold!important;
+  font-family: monospace;
+  letter-spacing: 7px!important;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.ErrorHeading h1 {
+  padding: 64px;
+  background: linear-gradient(to right, hsl(0, 1%, 74%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 1%, 74%));
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+
