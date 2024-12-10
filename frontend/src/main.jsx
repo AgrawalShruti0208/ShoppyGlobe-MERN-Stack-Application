@@ -12,7 +12,7 @@ import {Cart_Display} from './components/Cart_Display.jsx'
 import { PlacedOrder } from './components/PlacedOrder.jsx';
 import { AccessDenied } from './components/AccessDenied.jsx';
 import { LoginPage } from './components/LoginPage.jsx';
-import { SignUpPage } from './components/SignupPage.jsx';
+import { SignUpPage } from './components/SignUpPage.jsx';
 
 
 const router = createBrowserRouter([
