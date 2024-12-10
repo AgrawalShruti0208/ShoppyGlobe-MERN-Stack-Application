@@ -1,6 +1,7 @@
 import express from "express"
 import mongoose from "mongoose"
 import path from "path";
+import fs from "fs";
 
 //importing routes function in the server to run all the API routes
 import { ProductRoutes } from "./Routes/products.routes.js"; 
@@ -18,14 +19,10 @@ import bodyParser from "body-parser";
 import {loadEnv} from "../backend/loadEnv.js";
 import { fileURLToPath } from 'url';
 
-// Get the directory of the current file
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Resolve the path to config.env in the root folder
-const envPath = path.resolve(__dirname, '../config.env');
-
-// Load the environment variables
-loadEnv(envPath);
+if (fs.existsSync("./config.env")) {
+    loadEnv('./config.env');
+}
 
 //creating express application 
 const app = new express();
