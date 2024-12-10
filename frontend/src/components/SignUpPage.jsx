@@ -41,7 +41,7 @@ export function SignUpPage(){
                     email:email,
                     password:password
                 }
-                fetch("http://localhost:5300/register",{
+                fetch("https://shoppyglobe-mern-stack-application.onrender.com/register",{
                     //as browser only accepts fetch API using its options{} to pass the email and password to the Request Body
                     method:'post',
                     headers:{

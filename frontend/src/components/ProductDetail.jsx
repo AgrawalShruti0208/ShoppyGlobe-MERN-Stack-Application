@@ -15,7 +15,7 @@ export function ProductDetail(){
     const product_id = useParams(); //Getting the parameter passed
 
     //evaluating URL for fetching data
-    const FetchProducts_URL = `http://localhost:5300/products/${product_id.id}`;
+    const FetchProducts_URL = `https://shoppyglobe-mern-stack-application.onrender.com/products/${product_id.id}`;
 
     //state to store data
     const [ProductData,setProductData] = useState([]);
@@ -59,7 +59,7 @@ export function ProductDetail(){
     if(ProductData){
 
         function handleAddToCart(){
-            fetch("http://localhost:5300/cart",{
+            fetch("https://shoppyglobe-mern-stack-application.onrender.com/cart",{
                 //as browser only accepts fetch API using its options{} to pass the product to the POST HTTP METHOD BODY
                 method:'post',
                 headers: new Headers({

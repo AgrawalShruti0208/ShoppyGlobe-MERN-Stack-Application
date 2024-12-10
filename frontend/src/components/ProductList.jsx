@@ -8,7 +8,7 @@ import "./StyleSheets/StyleProductsListPage.css"
 
 export function ProductList(){
     
-    const FetchProducts_URL = 'http://localhost:5300/products';
+    const FetchProducts_URL = 'https://shoppyglobe-mern-stack-application.onrender.com/products';
     
     
     const [ProductData,setProductData] = useState([]);

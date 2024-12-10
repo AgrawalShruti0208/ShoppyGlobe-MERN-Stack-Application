@@ -30,7 +30,7 @@ export function Cart_Display(){
     // }
     
     
-    const FetchCartItems_URL = 'http://localhost:5300/cart/allItems';
+    const FetchCartItems_URL = 'https://shoppyglobe-mern-stack-application.onrender.com/cart/allItems';
     const options = {
         method: 'GET', 
         headers: new Headers({
@@ -85,7 +85,7 @@ export function Cart_Display(){
         }
 
         function handlePlaceOrder(){
-            fetch( "http://localhost:5300/cart",{
+            fetch( "https://shoppyglobe-mern-stack-application.onrender.com/cart",{
                 //as browser only accepts fetch API using its options{} to pass the productId to the DELETE HTTP METHOD BODY
                 method:'DELETE'
             }).then(response=>response.json()).then(data=>console.log("Removed Items from cart."));

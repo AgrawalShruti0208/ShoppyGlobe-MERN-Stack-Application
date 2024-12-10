@@ -13,7 +13,7 @@ export function Cart_Item(props){
 
     function handleRemoveCartItem(){
         
-        fetch( `http://localhost:5300/cart/${props.item._id}`,{
+        fetch( `https://shoppyglobe-mern-stack-application.onrender.com/cart/${props.item._id}`,{
             //as browser only accepts fetch API using its options{} to pass the productId to the DELETE HTTP METHOD BODY
             method:'DELETE', 
             headers: new Headers({
@@ -34,7 +34,7 @@ export function Cart_Item(props){
 
     function handleIncreaseQuantity(){
         const messageObj = {msg:"Increase"};
-        fetch( `http://localhost:5300/cart/${props.item._id}`,{
+        fetch( `https://shoppyglobe-mern-stack-application.onrender.com/cart/${props.item._id}`,{
             //as browser only accepts fetch API using its options{} to pass the productId to the DELETE HTTP METHOD BODY
             method:'PUT',
             headers:new Headers({
@@ -54,7 +54,7 @@ export function Cart_Item(props){
 
     function handleDecreaseQuantity(){
         const messageObj = {msg:"Decrease"};
-        fetch( `http://localhost:5300/cart/${props.item._id}`,{
+        fetch( `https://shoppyglobe-mern-stack-application.onrender.com/cart/${props.item._id}`,{
             //as browser only accepts fetch API using its options{} to pass the productId to the DELETE HTTP METHOD BODY
             method:'PUT',
             headers:new Headers({

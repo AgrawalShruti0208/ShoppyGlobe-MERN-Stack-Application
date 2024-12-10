@@ -11,7 +11,7 @@ export function Header(){
     
     // For getting number of cart items initially, using XMLHttpRequest library synchronously to fetch number of Cart Items
     const request = new XMLHttpRequest();
-    request.open('GET', 'http://localhost:5300/numberOfCartItems', false);  // `false` makes the request synchronous
+    request.open('GET', 'https://shoppyglobe-mern-stack-application.onrender.com/numberOfCartItems', false);  // `false` makes the request synchronous
     request.send(null);
     
     const data = JSON.parse(request.responseText);
@@ -38,7 +38,7 @@ export function Header(){
     }
     
 
-    const FetchCartItems_URL = 'http://localhost:5300/cart/allItems';
+    const FetchCartItems_URL = 'https://shoppyglobe-mern-stack-application.onrender.com/cart/allItems';
     const options = {
         method: 'GET', 
         headers: new Headers({

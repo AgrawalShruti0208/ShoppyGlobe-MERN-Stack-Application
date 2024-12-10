@@ -10,7 +10,7 @@ export function ProductItem(props){
     const jwtToken = localStorage.getItem("token");
     
     function handleAddToCart(){
-        fetch("http://localhost:5300/cart",{
+        fetch("https://shoppyglobe-mern-stack-application.onrender.com/cart",{
             //as browser only accepts fetch API using its options{} to pass the product to the POST HTTP METHOD BODY
             method:'post',
             headers: new Headers({
