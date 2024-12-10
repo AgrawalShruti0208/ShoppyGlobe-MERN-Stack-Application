@@ -43,8 +43,7 @@ app.get('*', (req,res) => {
     //MongoDB Atlas String:"mongodb+srv://shrutiagrawal155:u1OQPQrqjVQc1NqX@shoppyglobeapp.yqohw.mongodb.net/"
     
     // Connection string from MongoDB Atlas
-    let url="mongodb+srv://shrutiagrawal155:u1OQPQrqjVQc1NqX@shoppyglobeapp.yqohw.mongodb.net/ShoppyGlobe_DB";
-    
+    let url = process.env.MONGODB_URL;
 
     mongoose
     .connect(url)
