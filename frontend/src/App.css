@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Inter", "DM Sans", Arial, sans-serif;
   width: 99vw;
+  overflow-x: hidden;
 }
 
 .customBtn {

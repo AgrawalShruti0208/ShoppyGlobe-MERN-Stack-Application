@@ -13,7 +13,7 @@
 }
 
 .HeaderComponent {
-  height: 21vh;
+  height: 22vh;
   width: 99vw;
   display:flex;
   justify-content: center;
@@ -322,11 +322,11 @@
   cursor: pointer;
   display: inline-block;
   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 600;
   line-height: normal;
   outline: none;
-  padding: 12px 20px;
+  padding: 12px 15px;
   text-decoration: none;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   user-select: none;
@@ -350,7 +350,6 @@
 }
 
 
-
 .CartItemInput{
   width: 35px;
   font-size: 1.3rem;
@@ -367,3 +366,107 @@
   border: none;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1165px){
+  .LoginSuccessfulDiv{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .HeaderComponent {
+    height: 28vh;
+  }
+}
+
+@media only screen and (max-width: 990px){
+
+  .HeaderComponent {
+    padding: 0 10px 8px 10px;
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 6vw, 4rem);
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .Login_SignUp_Button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position:absolute;
+    top: 25px;
+    left: 35px;
+  }
+
+
+  .Login_SignUp_Button button {
+    width: 100%;
+    font-size: 16px;
+    height: 30px;
+  }
+
+  .cartValueOverlap{
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 8px 14px;
+    letter-spacing: 2px;
+  }
+
+  .cartValueOverlap img{
+    height: 70px;
+    width: 80px;
+  }
+  
+
+}
+
+@media only screen and (max-width: 830px) {
+  .HeaderComponent {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding:0px 10px 10px 10px;
+    height: 35vh;
+  }
+
+  .Login_SignUp_Button{
+    position:absolute;
+    top: 95px;
+    left: 35px;
+  }
+
+  .Cart_Items_Button{
+    position:absolute;
+    top: 95px;
+    right: 35px;
+  }
+
+  .LoginSuccessfulDiv{
+    position:absolute;
+    top: 75px;
+    left: 35px;
+  }
+
+  .logOutBtn img{
+    height: 50px;
+  }
+
+
+}
+
+@media only screen and (max-width: 350px){
+  .userEmail input{
+    font-size: 14px;
+  }
+
+  
+}
+

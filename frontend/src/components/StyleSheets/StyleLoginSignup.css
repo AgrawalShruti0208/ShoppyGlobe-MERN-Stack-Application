@@ -1,6 +1,6 @@
 .LoginSignupContainer{
     margin: 0;
-    
+    height: 76vh;
     background: linear-gradient(#2A00B7, #42006C);
     padding: 50px 500px;
     
@@ -12,6 +12,8 @@
     margin: auto;
     background: white;
     padding-bottom: 7px;
+    height: 100%;
+    width: 100%;
     
 }
 
