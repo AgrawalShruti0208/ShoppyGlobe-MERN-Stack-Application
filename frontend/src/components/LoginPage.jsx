@@ -59,6 +59,9 @@ export function LoginPage(){
         
     }
     
+    function handleGoBack(){
+        navigateTo(-1);
+    }
 
     function handleLogin(e){
         e.preventDefault();
@@ -112,81 +115,87 @@ export function LoginPage(){
 
 
     return(
-        <div className='LoginSignupContainer'>
-           
-            {!apiResult &&
-                <form className="container" onSubmit={handleLogin}>
-                
-                    <div className="header">
-                        <div className="text">Login</div>
-                        <div className="underline"></div>
-                    </div>  
-                    <div className="inputs">
-                        
-                        <div className="input">
-                            <img src="/email.png" alt="email icon" />
-                            <input type="email" name='email' value={email} placeholder='Enter your Email ID' required onChange={handleEmail} />
-                        </div>
+        <>
+            <div className="BackArrow2">
+                            
+                            <button onClick={handleGoBack}>
+                                <img src="/left-arrow.svg" className="BackArrowImg2" alt="Back Arrow" />
+                            </button>
 
-                        <div className="input">
-                            <img src="/password.png" alt="password icon" />
-                            <input type="password" name='password' value={password} placeholder='Enter your Password' required onChange={handlePassword}/>
-                        </div>
-                        
-                        {/* <div className="input">
-                            <img className='tokenIcon' src="/token.png" alt="token icon" />
-                            <input type="text" name='jwtToken' value={jwtToken} placeholder='Enter JWT Token to Authenticate' required onChange={handleJwtToken} />
-                        </div> */}
-                        
-                        
-                    </div>
-                    {err && <p className="Error">{err}</p>}
-                    <div className="submit-container">
-                        
-                        <button className="submit" type="submit">Login</button>
+                            <h3>Go Back</h3>
+            </div>
+            <div className='LoginSignupContainer'>
+            
+                {!apiResult &&
+                    <form className="container" onSubmit={handleLogin}>
                     
-                    </div>
-                </form>
-            }
-            {apiResult &&    
-                <div className="container">
-                    <div className="inputs">
+                        <div className="header">
+                            <div className="text">Login</div>
+                            <div className="underline"></div>
+                        </div>  
+                        <div className="inputs">
+                            
+                            <div className="input">
+                                <img src="/email.png" alt="email icon" />
+                                <input type="email" name='email' value={email} placeholder='Enter your Email ID' required onChange={handleEmail} />
+                            </div>
 
-                        {(apiResult!=='User Authentication Successful!') &&
-                            <>
-                                <div className="input">
-                                    <img src="/Error.gif" alt="Icon for Error" width="25%" />
-                                    <input value={apiResult} readOnly/>
-                                </div>
-                                <p className="ApiInstruction" style={{color: "red"}}>Error: Login Failed! Please Check your credentials.</p>
-                                <div className="submit-container">
-                                    <button className="submit" onClick={()=>location.reload()}>Try to Login Again</button>
-                                </div>
-                            </>   
-                        }
-                            
-                        {apiResult==='User Authentication Successful!' &&
-                            <>
-                                <div className="input">
-                                    <img src="/User_Created.gif" alt="Icon for Successful Login" width="27%" />
-                                    <input value={apiResult} readOnly/>
-                                </div>
-                                <p className="ApiInstruction">You are now logged in.  <span style={{color: "purple"}}>Happy Shopping!</span></p>
-                                <p className="ApiInstruction">Note: <span style={{color: "blue"}}>JWT Token generated, this session will expire in 10 minutes</span></p>
-                                <div className="submit-container">
-                                    <button className="submit" onClick={handleGoToHome}>Continue Shopping</button>
-                                </div>
-                            </> 
-                            
+                            <div className="input">
+                                <img src="/password.png" alt="password icon" />
+                                <input type="password" name='password' value={password} placeholder='Enter your Password' required onChange={handlePassword}/>
+                            </div>
                                 
-                        }
                             
+                        </div>
+                        {err && <p className="Error">{err}</p>}
+                        <div className="submit-container">
                             
-
+                            <button className="submit" type="submit">Login</button>
                         
+                        </div>
+                    </form>
+                }
+                {apiResult &&    
+                    <div className="container">
+                        <div className="inputs">
+
+                            {(apiResult!=='User Authentication Successful!') &&
+                                <>
+                                    <div className="input">
+                                        <img src="/Error.gif" alt="Icon for Error" width="25%" />
+                                        <input value={apiResult} readOnly/>
+                                    </div>
+                                    <p className="ApiInstruction" style={{color: "red"}}>Error: Login Failed! Please Check your credentials.</p>
+                                    <div className="submit-container">
+                                        <button className="submit" onClick={()=>location.reload()}>Try to Login Again</button>
+                                    </div>
+                                </>   
+                            }
+                                
+                            {apiResult==='User Authentication Successful!' &&
+                                <>
+                                    <div className="input">
+                                        <img src="/User_Created.gif" alt="Icon for Successful Login" width="27%" />
+                                        <input value={apiResult} readOnly/>
+                                    </div>
+                                    <p className="ApiInstruction">You are now logged in.  <span style={{color: "purple"}}>Happy Shopping!</span></p>
+                                    <p className="ApiInstruction">Note: <span style={{color: "blue"}}>JWT Token generated, this session will expire in 10 minutes</span></p>
+                                    <div className="submit-container">
+                                        <button className="submit" onClick={handleGoToHome}>Continue Shopping</button>
+                                    </div>
+                                </> 
+                                
+                                    
+                            }
+                                
+                                
+
+                            
+                        </div>
                     </div>
-                </div>
-            }
-        </div>
+                }
+            </div>
+        
+        </>
     );
 }

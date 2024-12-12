@@ -2,19 +2,25 @@
     margin: 0;
     height: 76vh;
     background: linear-gradient(#2A00B7, #42006C);
-    padding: 50px 500px;
-    
+    position: relative;
 }
 
 .LoginSignupContainer .container{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     margin: auto;
     background: white;
-    padding-bottom: 7px;
-    height: 100%;
+    padding: 20px; /* Adjust padding for better responsiveness */
+    border-radius: 10px; /* Add border radius for aesthetics */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
     width: 100%;
-    
+    max-width: 500px; /* Limit the maximum width */
+
 }
 
 .LoginSignupContainer .container .header{
@@ -44,13 +50,14 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+    width: 100%;
 }
 
 .LoginSignupContainer .container .inputs .input{
     display: flex;
     align-items: center;
     margin: auto;
-    width: 480px;
+    width: 100%;
     height: 80px;
     background: #dedede;
     border-radius: 6px;
@@ -112,4 +119,56 @@
     font-size: 18px;
     font-weight: 600;
     margin-left: 20px;
+}
+
+
+@media only screen and (max-width: 505px){
+    
+    .BackArrow2 button:hover{
+        transform: scale(0.9);
+    }
+    
+    .BackArrow2 button:active{
+        transform: scale(0.6);
+    }
+    
+    .BackArrow2 h3{
+        font-size: 1.1rem;
+    }
+    
+    .BackArrow2 button img{
+        height: 40px;
+    }
+
+    .LoginSignupContainer .container{
+
+        position: relative;
+        top: 50%;
+        width: 100%;      
+        margin: 0 auto;  
+        padding: 15px;
+        border-radius: 0px;
+    
+    }
+
+    .LoginSignupContainer .container .header .text{
+        font-size: 27px;
+    }
+
+    .LoginSignupContainer .container .header{
+        gap: 7px;
+    }
+    
+    .LoginSignupContainer .container .header .underline{
+        width: 76px;
+    }
+
+}
+
+@media only screen and (max-width: 376px){
+    .LoginSignupContainer .container .submit-container .submit{
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
 }

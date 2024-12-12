@@ -108,6 +108,11 @@ export function SignUpPage(){
         }
         
     }
+    
+    function handleGoBack(){
+        navigateTo(-1);
+    }
+
     function handlePassword(evt){
         const value = evt.target.value;
 
@@ -122,58 +127,68 @@ export function SignUpPage(){
     }
 
     return(
-    <div className='LoginSignupContainer'>
-        {!apiResult && 
-            <form className="container" onSubmit={handleSignUp}>
-                <div className="header">
-                    <div className="text">Sign Up</div>
-                    <div className="underline"></div>
-                </div>  
-                <div className="inputs">
-                    
-                    <div className="input">
-                        <img src="/email.png" alt="email icon" />
-                        <input type="email" name='email' value={email} placeholder='Enter your Email ID' required onChange={handleEmail} />
-                    </div>
-                    <div className="input">
-                        <img src="/password.png" alt="password icon" />
-                        <input type="password" name='password' value={password} placeholder='Enter your Password' required onChange={handlePassword} />
-                    </div>
-                </div>
-                {err && <p className="Error">{err}</p>}
-
-                <div className="submit-container">
-                    <button className="submit" type="submit">Sign Up</button>
-                </div>
-            </form>
-        }
-        {apiResult && 
-            <div className="container">
-                <div className="inputs">
-                    <div className="input">
-                        <img src={apiResultDisplay.image} alt="Icon for Registration result" width="27%" />
-                        <input value={apiResult} readOnly/>
-                    </div>
-                    <p className="ApiInstruction">{apiResultDisplay.instruction}</p>
-                    <div className="submit-container">
-                        
-                        {(apiResult==='User with this Email ID Exists!') &&
-                            <button className="submit" onClick={()=>location.reload()}>Sign Up</button>
-                        }
-                        
-                        {(apiResult==='Registration Successful!' || apiResult==='User with this Email ID Exists!')&&
-                            <button className="submit" onClick={handleLogin}>Login</button>
+        <>
+            <div className="BackArrow2">
                             
-                        }
-                        
-                        { !['Registration Successful!', 'User with this Email ID Exists!'].includes(apiResult) && <button className="submit" onClick={()=>location.reload()}>Sign Up</button> }
-                       
+                            <button onClick={handleGoBack}>
+                                <img src="/left-arrow.svg" className="BackArrowImg2" alt="Back Arrow" height="60px" />
+                            </button>
 
-                    </div>
-                </div>
+                            <h3>Go Back</h3>
             </div>
-        }  
-    </div>
+            <div className='LoginSignupContainer'>
+                {!apiResult && 
+                    <form className="container" onSubmit={handleSignUp}>
+                        <div className="header">
+                            <div className="text">Sign Up</div>
+                            <div className="underline"></div>
+                        </div>  
+                        <div className="inputs">
+                            
+                            <div className="input">
+                                <img src="/email.png" alt="email icon" />
+                                <input type="email" name='email' value={email} placeholder='Enter your Email ID' required onChange={handleEmail} />
+                            </div>
+                            <div className="input">
+                                <img src="/password.png" alt="password icon" />
+                                <input type="password" name='password' value={password} placeholder='Enter your Password' required onChange={handlePassword} />
+                            </div>
+                        </div>
+                        {err && <p className="Error">{err}</p>}
+
+                        <div className="submit-container">
+                            <button className="submit" type="submit">Sign Up</button>
+                        </div>
+                    </form>
+                }
+                {apiResult && 
+                    <div className="container">
+                        <div className="inputs">
+                            <div className="input">
+                                <img src={apiResultDisplay.image} alt="Icon for Registration result" width="27%" />
+                                <input value={apiResult} readOnly/>
+                            </div>
+                            <p className="ApiInstruction">{apiResultDisplay.instruction}</p>
+                            <div className="submit-container">
+                                
+                                {(apiResult==='User with this Email ID Exists!') &&
+                                    <button className="submit" onClick={()=>location.reload()}>Sign Up</button>
+                                }
+                                
+                                {(apiResult==='Registration Successful!' || apiResult==='User with this Email ID Exists!')&&
+                                    <button className="submit" onClick={handleLogin}>Login</button>
+                                    
+                                }
+                                
+                                { !['Registration Successful!', 'User with this Email ID Exists!'].includes(apiResult) && <button className="submit" onClick={()=>location.reload()}>Sign Up</button> }
+                            
+
+                            </div>
+                        </div>
+                    </div>
+                }  
+            </div>
+        </>
     );
 
 }
