@@ -164,7 +164,7 @@ export function SignUpPage(){
                 {apiResult && 
                     <div className="container">
                         <div className="inputs">
-                            <div className="input">
+                            <div className="input result">
                                 <img src={apiResultDisplay.image} alt="Icon for Registration result" width="27%" />
                                 <input value={apiResult} readOnly/>
                             </div>

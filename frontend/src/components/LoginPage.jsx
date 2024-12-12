@@ -161,7 +161,7 @@ export function LoginPage(){
 
                             {(apiResult!=='User Authentication Successful!') &&
                                 <>
-                                    <div className="input">
+                                    <div className="input result">
                                         <img src="/Error.gif" alt="Icon for Error" width="25%" />
                                         <input value={apiResult} readOnly/>
                                     </div>
@@ -174,7 +174,7 @@ export function LoginPage(){
                                 
                             {apiResult==='User Authentication Successful!' &&
                                 <>
-                                    <div className="input">
+                                    <div className="input result">
                                         <img src="/User_Created.gif" alt="Icon for Successful Login" width="27%" />
                                         <input value={apiResult} readOnly/>
                                     </div>
