@@ -13,7 +13,8 @@
 }
 
 .emptyCartOverlay img{
-  max-height: 65vh;
+    width: 100%;
+    height: 80%;
 }
 
 
@@ -37,7 +38,7 @@
   
   .EmptyCartHeading h1 {
     color: hsl(0, 0%, 16%);
-    font-size: 32px;
+    font-size: 210%;
     font-weight: 800;
    letter-spacing: 7px!important;
     text-transform: uppercase;
@@ -218,7 +219,79 @@
     transform: translateY(2px);
 }
 
-  
+.cartCheckOutFlex h3{
+  font-size: 1rem;
+  margin: 0px;
+}
+
+@media only screen and (max-width : 911px) {
+  .ShoppingCartSections{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .ShoppingCartSections>*{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 701px){
+  .ShoppingCartHeading h1{
+      font-size: 3.5vi;
+      letter-spacing: -.07ch;
+      line-height: .75;
+  }
+}
+
+@media only screen and (max-width: 651px){
+  .EmptyCartHeading h1{
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 516px){
+  .EmptyCartHeading h1{
+    font-size: 120%;
+  }
+}
+
+@media only screen and (max-width:461px){
+  .ShoppingCartHeading h1{
+      font-size: 4.5vi;
+      text-shadow:
+        /* regular text-shadow */
+        0 .10ch 15px var(--shadow),
+        /* text-shadow highlight */
+        0 -1px 0 var(--highlight);
+  }
+}
+
+@media only screen and (max-width: 443px){
+  .EmptyCartHeading h1{
+    font-size: 81%;
+  }
+}
+
+
+@media only screen and (max-width:350px){
+  .ShoppingCartHeading h1{
+      font-size: 5.5vi;
+      text-shadow:
+        /* regular text-shadow */
+        0 .5ch 5px var(--shadow),
+        /* text-shadow highlight */
+        0 -1px 0 var(--highlight);
+  }
+
+  .EmptyCartHeading{
+    height: 60px;
+  }
+
+  .EmptyCartHeading h1{
+    animation: none;
+    font-size: 90%;
+  }
+}
  
   
   

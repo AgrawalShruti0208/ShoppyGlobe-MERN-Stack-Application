@@ -73,6 +73,8 @@ transform: translateY(2px);
   align-items: center;
 }
 
+
+
 .ErrorPageDiv{
   display: flex;
   flex-direction: column;
@@ -126,5 +128,14 @@ transform: translateY(2px);
   100% {
     background-position: 600px;
   }
+}
+
+@media only screen and (max-width:411px) {
+  .PlaceOrderDiv h1{
+      font-size: 1.5rem;
+  }
+  .PlaceOrderDiv h2{
+    font-size: 1.2rem;
+}
 }
 

@@ -33,8 +33,7 @@
     padding-left: 40px;
 }
 .Item_Info h5, .Item_Info h4{
-    margin: 0;
-    height: 30px;
+    margin: 7px;
 }
 .Item_Info h5{
     color: rgb(76, 76, 76);
@@ -104,4 +103,106 @@
 .Item_Quantity_Section h4{
     padding: 8px;
 }
+
+
+@media only screen and (max-width : 1201px) {
+    .Item_Information{
+        width: 90%;
+        display: flex;
+    }
+    
+    .Total_Price{
+        width: 10%;
+        text-align: right;
+        padding-right: 2px;
+    }
+
+    .Total_Price h3{
+        margin: 0px;
+        font-size: 1rem;
+    }
+
+    .Item_Image{
+        width: 50%;
+    }
+    
+}
+
+@media only screen and (max-width : 1031px) {
+    
+    .Item_Image{
+        width: 60%;
+    }
+
+    .Item_Info h4{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width : 701px) {
+    
+    .Item_Image{
+        width: 28%;
+    }
+    
+    .Item_Info{
+        padding-left: 5px;
+        width: 72%;
+    }
+
+    .RemoveBtn{
+        margin-left: -170px;
+        margin-top: 53px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 7px #636262;
+    }
+}
+
+@media only screen and (max-width:621px){
+    .Item_Information{
+        width: 85%;
+    }
+    
+    .Total_Price{
+        width: 15%;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width:461px){
+    .Item_Information{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .Total_Price{
+        width: 20%;
+    }
+
+    .Item_Image{
+        width: 60%;
+    }
+    
+    .Item_Info{
+        padding-left: 5px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:461px){
+
+    .Total_Price h3{
+        font-size: 0.8rem;
+    }
+
+    .Item_Image{
+        width: 70%;
+    }
+    
+}
+
 
