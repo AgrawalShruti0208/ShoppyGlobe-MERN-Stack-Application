@@ -114,14 +114,14 @@ export function ProductDetail(){
 
                     <div className="ProductsDescription">
                         <h1 className="Product_Title">{ProductData.title}</h1>
-                        <div className="Product_flex1">
+                        <div className="Product_flex1 category">
                             <h3 className="greyText"><i>category:</i></h3>
                             <h3 className="tags">{ProductData.category}</h3>
                             <h5 className="greyText">|</h5>
                             <h3><StarRating ProductRating={ProductData.rating} starHeight={"20px"} /></h3>
                         </div>
                         <hr />
-                        <div className="Product_flex2">
+                        <div className="ProductDetailsDiv">
                             <h2>Product Details:</h2>
                             <h3 className="greyText">{ProductData.description}</h3>
                         </div>
@@ -130,7 +130,7 @@ export function ProductDetail(){
                             <h2>Customer Reviews:</h2>
                             {ProductData.reviews && ProductData.reviews.map((reviewData,index)=>{
                                 return <div key={index} className="Product_flex3">
-                                    <div className="Product_flex1">
+                                    <div className="Product_flex1 category">
                                         <h5>🟪</h5>
                                         <h3>{reviewData.reviewerName} :</h3>
                                         <h5><StarRating ProductRating={reviewData.rating} starHeight={"15px"}/></h5>
